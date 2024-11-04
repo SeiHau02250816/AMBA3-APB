@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../AMBA3_APB_SVTB_Vivado.srcs/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_intf.sv" \
+"../../../../AMBA3_APB_SVTB_Vivado.srcs/sim_1/imports/AMBA3_APB_SV_TB/src/apb_rtl.sv" \
+"../../../../AMBA3_APB_SVTB_Vivado.srcs/sim_1/imports/AMBA3_APB_SV_TB/verif/tb_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
