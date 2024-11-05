@@ -55,7 +55,7 @@ module tb_top();
 	initial begin
 	    pclk = 0;
 	    
-		apb_test_h = new(intf);
+		apb_test_h = new(intf, 10);
 		apb_test_h.main();
 	end
 endmodule

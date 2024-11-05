@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="C:/Teo Sei Hau/Project/SystemVerilog Projects/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="fdda1112cf1e4f73bdc9efd413d6a1df"/>
@@ -59,7 +59,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="91"/>
+    <Option Name="WTXSimLaunchSim" Val="94"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -106,7 +106,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_intf.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/verif/apb_intf.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_intf.sv"/>
           <Attr Name="ImportTime" Val="1729581810"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -115,7 +115,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/src/apb_rtl.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/src/apb_rtl.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/src/apb_rtl.sv"/>
           <Attr Name="ImportTime" Val="1729580441"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -124,7 +124,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_txn.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/verif/apb_txn.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_txn.sv"/>
           <Attr Name="ImportTime" Val="1729587031"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -133,7 +133,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_test.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/verif/apb_test.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_test.sv"/>
           <Attr Name="ImportTime" Val="1729587701"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -142,7 +142,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_env.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/verif/apb_env.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_env.sv"/>
           <Attr Name="ImportTime" Val="1729587556"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -151,7 +151,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_drv.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/verif/apb_drv.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_drv.sv"/>
           <Attr Name="ImportTime" Val="1729582868"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -160,7 +160,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_mon.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/verif/apb_mon.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_mon.sv"/>
           <Attr Name="ImportTime" Val="1729584380"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -169,7 +169,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_gen.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/verif/apb_gen.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_gen.sv"/>
           <Attr Name="ImportTime" Val="1729586793"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -178,7 +178,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_sb.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/verif/apb_sb.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_sb.sv"/>
           <Attr Name="ImportTime" Val="1729585698"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -187,7 +187,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/tb_top.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../AMBA3_APB_SV_TB/verif/tb_top.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/tb_top.sv"/>
           <Attr Name="ImportTime" Val="1729582414"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -196,14 +196,6 @@
       </File>
       <File Path="$PPRDIR/tb_top_behav.wcfg">
         <FileInfo>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/new/apb_read_txn_gen.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>

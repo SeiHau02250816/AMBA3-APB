@@ -21,12 +21,14 @@ class apb_env;
 	apb_mon apb_mon_h;
 	apb_sb  apb_sb_h;
 	mailbox m2s_mb;
+	int num_txns;
 	
-	function new(virtual apb_intf vintf);
+	function new(virtual apb_intf vintf, int num_txns = 10);
 		this.vintf = vintf;
+		this.num_txns = num_txns;
 		
 		g2d_mb = new();
-		apb_gen_h = new(g2d_mb);
+		apb_gen_h = new(g2d_mb, this.num_txns);
 		apb_drv_h = new(this.vintf, g2d_mb);
 		
 		m2s_mb = new();
@@ -35,7 +37,7 @@ class apb_env;
 	endfunction
 	
 	task main;
-		$display("Task main :: apb_env");
+		$display("Task main :: apb_env with %0d transactions", num_txns);
 		
 		fork 
 			apb_gen_h.gen();
@@ -44,7 +46,7 @@ class apb_env;
 			apb_sb_h.check();
 		join_any
 		
-		#500;
+		#1500;
 		$finish;
 	endtask
 endclass
