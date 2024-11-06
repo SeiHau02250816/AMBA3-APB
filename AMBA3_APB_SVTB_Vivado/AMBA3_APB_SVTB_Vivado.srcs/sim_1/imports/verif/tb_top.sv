@@ -13,9 +13,9 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `include "apb_txn.sv"
-`include "single_write_single_read_test.sv"
-`include "consecutive_mult_write_mult_read_test.sv"
-`include "non_consecutive_mult_write_mult_read_test.sv"
+`include "tests/single_write_single_read_test.sv"
+`include "tests/consecutive_mult_write_mult_read_test.sv"
+`include "tests/non_consecutive_mult_write_mult_read_test.sv"
 `include "apb_env.sv"
 `include "apb_drv.sv"
 `include "apb_gen.sv"
@@ -30,7 +30,6 @@ module tb_top();
 	non_consecutive_mult_write_mult_read_test  test_03_h;
 	
 	logic pclk, presetn;
-	apb_test apb_test_h;
 	
 	// Interface instantiation
 	apb_intf intf(pclk, presetn);
