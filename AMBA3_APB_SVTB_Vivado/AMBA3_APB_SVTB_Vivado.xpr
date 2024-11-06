@@ -59,7 +59,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="94"/>
+    <Option Name="WTXSimLaunchSim" Val="110"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -122,19 +122,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_txn.sv">
+      <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_test.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_txn.sv"/>
-          <Attr Name="ImportTime" Val="1729587031"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_test.sv"/>
+          <Attr Name="ImportTime" Val="1729587701"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_test.sv">
+      <File Path="$PSRCDIR/sim_1/imports/AMBA3_APB_SV_TB/verif/apb_txn.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_test.sv"/>
-          <Attr Name="ImportTime" Val="1729587701"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_txn.sv"/>
+          <Attr Name="ImportTime" Val="1729587031"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

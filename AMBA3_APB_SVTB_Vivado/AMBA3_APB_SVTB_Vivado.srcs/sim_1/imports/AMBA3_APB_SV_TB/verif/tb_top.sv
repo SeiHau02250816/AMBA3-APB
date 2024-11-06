@@ -8,11 +8,14 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
+// Revision 1.10 - More tests added
 // Additional Comments: TB top for AMBA3 APB 
 // 
 //////////////////////////////////////////////////////////////////////////////////
 `include "apb_txn.sv"
-`include "apb_test.sv"
+`include "single_write_single_read_test.sv"
+`include "consecutive_mult_write_mult_read_test.sv"
+`include "non_consecutive_mult_write_mult_read_test.sv"
 `include "apb_env.sv"
 `include "apb_drv.sv"
 `include "apb_gen.sv"
@@ -22,6 +25,10 @@
 
 
 module tb_top();
+	single_write_single_read_test              test_01_h;
+	consecutive_mult_write_mult_read_test      test_02_h;
+	non_consecutive_mult_write_mult_read_test  test_03_h;
+	
 	logic pclk, presetn;
 	apb_test apb_test_h;
 	
@@ -55,7 +62,13 @@ module tb_top();
 	initial begin
 	    pclk = 0;
 	    
-		apb_test_h = new(intf, 10);
-		apb_test_h.main();
+//	    test_01_h = new(intf);
+//	    test_01_h.main();
+	    
+//	    test_02_h = new(intf);
+//	    test_02_h.main();
+	    
+	    test_03_h = new(intf);
+	    test_03_h.main();
 	end
 endmodule

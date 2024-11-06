@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Tue Nov  5 19:58:33 2024
-# Process ID: 68228
+# Start of session at: Wed Nov  6 18:14:50 2024
+# Process ID: 26176
 # Current directory: C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent58508 C:\Teo Sei Hau\Project\Git\AMBA3-APB\AMBA3_APB_SVTB_Vivado\AMBA3_APB_SVTB_Vivado.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent70284 C:\Teo Sei Hau\Project\Git\AMBA3-APB\AMBA3_APB_SVTB_Vivado\AMBA3_APB_SVTB_Vivado.xpr
 # Log file: C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/vivado.log
 # Journal file: C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado\vivado.jou
 # Running On        :SeiHau
@@ -17,9 +17,9 @@
 # CPU Physical cores:14
 # CPU Logical cores :20
 # Host memory       :16893 MB
-# Swap memory       :10200 MB
-# Total Virtual     :27093 MB
-# Available Virtual :12457 MB
+# Swap memory       :10462 MB
+# Total Virtual     :27355 MB
+# Available Virtual :8863 MB
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.xpr}
@@ -27,8 +27,19 @@ launch_simulation
 open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
 source tb_top.tcl
 close_sim
-export_ip_user_files -of_objects  [get_files {{C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/apb_read_txn_gen.sv}}] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {{C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/apb_read_txn_gen.sv}}
+launch_simulation
+open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
+source tb_top.tcl
+close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/single_write_single_read_test.sv} w ]
+add_files -fileset sim_1 {{C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/single_write_single_read_test.sv}}
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+update_compile_order -fileset sim_1
 launch_simulation
 open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
 source tb_top.tcl
@@ -36,4 +47,54 @@ close_sim
 launch_simulation
 open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
 source tb_top.tcl
+close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/consecutive_multiple_read_multiple_write_test.sv} w ]
+add_files -fileset sim_1 {{C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/consecutive_multiple_read_multiple_write_test.sv}}
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files {{C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/consecutive_multiple_read_multiple_write_test.sv}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/consecutive_multiple_read_multiple_write_test.sv}}
+file delete -force {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/consecutive_multiple_read_multiple_write_test.sv}
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/consecutive_mult_write_mult_read_test.sv} w ]
+add_files -fileset sim_1 {{C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/consecutive_mult_write_mult_read_test.sv}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
+source tb_top.tcl
+close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/non_consecutive_mult_write_mult_read_test.sv} w ]
+add_files -fileset sim_1 {{C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/AMBA3_APB_SVTB_Vivado.srcs/sim_1/new/non_consecutive_mult_write_mult_read_test.sv}}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
+source tb_top.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
+source tb_top.tcl
+save_wave_config {C:/Teo Sei Hau/Project/Git/AMBA3-APB/AMBA3_APB_SVTB_Vivado/tb_top_behav.wcfg}
 close_sim

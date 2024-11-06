@@ -8,6 +8,7 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
+// Revision 1.10 - More tests added
 // Additional Comments: Enviroment for AMBA3 APB SV TB 
 // 
 //////////////////////////////////////////////////////////////////////////////////
@@ -21,14 +22,12 @@ class apb_env;
 	apb_mon apb_mon_h;
 	apb_sb  apb_sb_h;
 	mailbox m2s_mb;
-	int num_txns;
 	
-	function new(virtual apb_intf vintf, int num_txns = 10);
+	function new(virtual apb_intf vintf);
 		this.vintf = vintf;
-		this.num_txns = num_txns;
 		
 		g2d_mb = new();
-		apb_gen_h = new(g2d_mb, this.num_txns);
+		apb_gen_h = new(g2d_mb);
 		apb_drv_h = new(this.vintf, g2d_mb);
 		
 		m2s_mb = new();
@@ -37,7 +36,7 @@ class apb_env;
 	endfunction
 	
 	task main;
-		$display("Task main :: apb_env with %0d transactions", num_txns);
+		$display("Task main :: apb_env");
 		
 		fork 
 			apb_gen_h.gen();
@@ -50,3 +49,4 @@ class apb_env;
 		$finish;
 	endtask
 endclass
+
