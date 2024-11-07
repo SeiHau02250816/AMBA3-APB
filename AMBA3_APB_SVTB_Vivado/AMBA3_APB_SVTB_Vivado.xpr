@@ -59,7 +59,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="142"/>
+    <Option Name="WTXSimLaunchSim" Val="146"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -167,15 +167,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/verif/apb_write_txn_gen.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_write_txn_gen.sv"/>
-          <Attr Name="ImportTime" Val="1730897756"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sim_1/imports/verif/apb_env.sv">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_env.sv"/>
@@ -223,16 +214,6 @@
       </File>
       <File Path="$PPRDIR/tb_top_behav.wcfg">
         <FileInfo>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/verif/apb_read_txn_gen.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../SystemVerilog Projects/AMBA3_APB_SV_TB/verif/apb_read_txn_gen.sv"/>
-          <Attr Name="ImportTime" Val="1730897770"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>

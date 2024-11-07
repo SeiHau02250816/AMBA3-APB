@@ -19,7 +19,6 @@
 `include "apb_env.sv"
 `include "apb_drv.sv"
 `include "apb_gen.sv"
-`include "apb_write_txn_gen.sv"
 `include "apb_mon.sv"
 `include "apb_sb.sv"
 

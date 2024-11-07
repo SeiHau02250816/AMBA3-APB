@@ -15,7 +15,7 @@
 
 class apb_env;
 	virtual apb_intf vintf;
-	apb_write_txn_gen apb_gen_h;
+	apb_gen apb_gen_h;
 	apb_drv apb_drv_h;
 	mailbox g2d_mb;
 	
