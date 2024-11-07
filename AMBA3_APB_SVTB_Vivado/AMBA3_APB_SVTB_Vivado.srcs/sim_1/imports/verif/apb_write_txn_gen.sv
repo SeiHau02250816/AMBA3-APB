@@ -48,17 +48,24 @@ class apb_write_txn_gen extends apb_gen;
 		end
 	endfunction
 
-	// Task for generating transactions consecutively
+	// Task for generating consecutive transactions
 	task gen_consecutive();
-		for (int i = 1; i <= num_txns; i++) begin
+	    int unsigned addr_array[]; // Array to store randomized addresses
+	    
+		// Step 1: Initialize the size of addr_array
+		addr_array = new[num_txns];
+
+		// Step 2: Generate consecutive write transactions
+		for (int i = 0; i < num_txns; i++) begin
 			// Write transactions
 			write_setup_txn = new();
 			write_setup_txn.randomize() with {
 				psel == 1;
 				penable == 0;
 				pwrite == 1;
-				paddr == i;
+				paddr inside {[0:1023]};
 			};
+			addr_array[i] = write_setup_txn.paddr; // Store randomized addr so we can read from this addr later.
 			g2d_mb.put(write_setup_txn);
 
 			write_ready_txn = write_setup_txn.clone();
@@ -70,19 +77,20 @@ class apb_write_txn_gen extends apb_gen;
 			idle_txn.randomize() with {
 				psel == 0;
 				penable == 0;
-				paddr == i;
+				paddr == addr_array[i];
 			};
 			g2d_mb.put(idle_txn);
 		end
 
-		for (int i = 1; i <= num_txns; i++) begin
+		// Step 3: Generate consecutive read transactions
+		for (int i = 0; i < num_txns; i++) begin
 			// Read transactions
 			read_setup_txn = new();
 			read_setup_txn.randomize() with {
 				psel == 1;
 				penable == 0;
 				pwrite == 0;
-				paddr == i;
+				paddr == addr_array[i]; // Use pre-randomized address
 			};
 			g2d_mb.put(read_setup_txn);
 
@@ -95,23 +103,25 @@ class apb_write_txn_gen extends apb_gen;
 			idle_txn.randomize() with {
 				psel == 0;
 				penable == 0;
-				paddr == i;
+				paddr == addr_array[i];
 			};
 			g2d_mb.put(idle_txn);
 		end
 	endtask
 
-	// Task for generating transactions non-consecutively (alternating)
+	// Task for generating non-consecutive transactions (alternating)
 	task gen_non_consecutive();
-		for (int i = 1; i <= num_txns; i++) begin
+	    int unsigned addr;
+		for (int i = 0; i < num_txns; i++) begin
 			// Write transactions
 			write_setup_txn = new();
 			write_setup_txn.randomize() with {
 				psel == 1;
 				penable == 0;
 				pwrite == 1;
-				paddr == i;
+				paddr inside {[0:1023]};
 			};
+			addr = write_setup_txn.paddr;
 			g2d_mb.put(write_setup_txn);
 
 			write_ready_txn = write_setup_txn.clone();
@@ -124,7 +134,7 @@ class apb_write_txn_gen extends apb_gen;
 				psel == 1;
 				penable == 0;
 				pwrite == 0;
-				paddr == i;
+				paddr == addr;
 			};
 			g2d_mb.put(read_setup_txn);
 
@@ -137,7 +147,7 @@ class apb_write_txn_gen extends apb_gen;
 			idle_txn.randomize() with {
 				psel == 0;
 				penable == 0;
-				paddr == i;
+				paddr == addr;
 			};
 			g2d_mb.put(idle_txn);
 		end
@@ -155,5 +165,7 @@ class apb_write_txn_gen extends apb_gen;
 		end
 	endtask
 endclass
+
+
 
 
